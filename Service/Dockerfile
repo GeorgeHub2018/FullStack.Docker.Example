@@ -1,33 +1,10 @@
-FROM golang:latest 
-RUN mkdir /app 
-ADD . /app/ 
-WORKDIR /app 
-RUN go build -o main . 
-CMD ["/app/main"]
-
+# start from scratch
 FROM scratch
-ADD main /
-CMD ["/main"]
 
-FROM golang:alpine as golang
-WORKDIR /go/src/app
-COPY . .
-# Static build required so that we can safely copy the binary over.
-RUN CGO_ENABLED=0 go install -ldflags '-extldflags "-static"'
-
-FROM alpine:latest as alpine
-RUN apk --no-cache add tzdata zip ca-certificates
-WORKDIR /usr/share/zoneinfo
-# -0 means no compression.  Needed because go's
-# tz loader doesn't handle compressed data.
-RUN zip -q -r -0 /zoneinfo.zip .
-
-FROM scratch
+#ENV GOPATH /go/
 # the test program:
-COPY --from=golang /go/bin/app /app
-# the timezone data:
-ENV ZONEINFO /zoneinfo.zip
-COPY --from=alpine /zoneinfo.zip /
-# the tls certificates:
-COPY --from=alpine /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
-ENTRYPOINT ["/app"]
+#COPY --from=golang ./go/src/FullStack.Docker.Example/Service/bin FullStack.Service
+# COPY bin/FullStack.Service.exe /
+COPY bin/FullStack.Service.exe FullStack.Service
+EXPOSE 38080
+ENTRYPOINT ["./FullStack.Service"]
