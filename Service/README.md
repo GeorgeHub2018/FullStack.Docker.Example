@@ -19,4 +19,4 @@
   - Build project: run **app.build.bat** file
   - Make Docker Image: run **docker.build.bat** file
   - Run Docker Image: run **docker.run.bat** file
-  - In Browser open url: [localhost:38080](localhost:38080)
+  - In Browser open url: [localhost:38080](http://localhost:38080)
