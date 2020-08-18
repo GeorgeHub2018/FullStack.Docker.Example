@@ -25,4 +25,4 @@
 
 ### How it works?
 We build Golang application (on our machine) for Linux using Golang. Then we put this App to Docker Image and Run it.
-This Docker Image will have minimum size.
+This Docker Image will have minimum size - 7.4Mb (only app).
