@@ -22,3 +22,7 @@
   - Make Docker Image: run **docker.build.bat** file
   - Run Docker Image: run **docker.run.bat** file
   - In Browser open url: [localhost:38080](http://localhost:38080) and you will see text "Hello, !"
+
+### How it works?
+We build Golang application (on our machine) for Linux using Golang. Then we put this App to Docker Image and Run it.
+This Docker Image will have minimum size.
