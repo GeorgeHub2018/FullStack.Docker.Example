@@ -15,10 +15,12 @@
   - [Docker installation](https://docs.docker.com/docker-for-windows/install/)
   - [FullStack.Docker.Example.Service installation](https://github.com/GeorgeHub2018/FullStack.Docker.Example/tree/master/Service)
 
-
 ### Order of work:
   - Install Docker
   - Make FullStack.Docker.Example.Service Docker Image and run it
   - Make Docker Image: run **docker.build.bat** file
   - Run Docker Image: run **docker.run.bat** file
   - In Browser open url: [localhost:38081](http://localhost:38081) and you will see message "Hello, World!"
+
+### How it works?
+We place our Web site (html+js files) to Docker Image and run it. Nginx is a base of this Docker Image, we need it for run html files. Docker Image will have about 21.3Mb size (website + nginx).
