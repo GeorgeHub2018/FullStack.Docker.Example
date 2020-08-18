@@ -20,7 +20,7 @@
   - Make FullStack.Docker.Example.Service Docker Image and run it
   - Make Docker Image: run **docker.build.bat** file
   - Run Docker Image: run **docker.run.bat** file
-  - In Browser open url: [localhost:38081](http://localhost:38081) and you will see message "Hello, World!"
+  - In Browser open url: [localhost:38081](http://localhost:38081) and you will see message "Server response: Hello, World!"
 
 ### How it works?
 We place our Website (html+js files) to Docker Image and run it. Nginx is a base of this Docker Image, we need it for run html files. Docker Image will have about 21.3Mb size (Website + nginx).
