@@ -1,4 +1,4 @@
-# This is test application that shows how to put Web site to the Docker Image and run it.
+# This is test application that shows how to put Website to the Docker Image and run it.
 
 ### Files:
   - **js/service.js** - JavaScript file that allow to make Api request to Server side
@@ -7,7 +7,7 @@
   - **docker.images.bat** - shows list of Docker Images
   - **docker.run.bat** - runs last compiled Docker Image
   - **Dockerfile** - Docker file that describes what will be inside Docker Image (in our case this is only js/service.js and index.html files)
-  - **index.html** - main HTML file in this Web project
+  - **index.html** - main HTML file in this Website
   - **README.md** - file with readme information
   - **ver** - file with version (version is automaticaly increasing when you build new Docker Image)
 
@@ -23,4 +23,4 @@
   - In Browser open url: [localhost:38081](http://localhost:38081) and you will see message "Hello, World!"
 
 ### How it works?
-We place our Web site (html+js files) to Docker Image and run it. Nginx is a base of this Docker Image, we need it for run html files. Docker Image will have about 21.3Mb size (website + nginx).
+We place our Website (html+js files) to Docker Image and run it. Nginx is a base of this Docker Image, we need it for run html files. Docker Image will have about 21.3Mb size (Website + nginx).
